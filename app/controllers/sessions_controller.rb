@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def new
-    dubagger
   end
 
   def create
