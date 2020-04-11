@@ -6,7 +6,7 @@
 
 workers Integer(ENV['WEB_CONCURRENCY'] || 2)
 threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 5)
-#threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
+# threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 threads threads_count, threads_count
 preload_app!
 
@@ -51,10 +51,10 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # cannot share connections between processes.
 #
 on_worker_boot do
-ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
-# end
-#
+  ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
+  # end
+  #
 
-# Allow puma to be restarted by `rails restart` command.
-#plugin :tmp_restart
+  # Allow puma to be restarted by `rails restart` command.
+  # plugin :tmp_restart
 end
