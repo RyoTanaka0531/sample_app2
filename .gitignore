@@ -22,4 +22,5 @@
 
 .byebug_history
 # Ignore Spring files.
-/spring/*.
+/spring
+/public/uploads
